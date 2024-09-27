@@ -1,0 +1,134 @@
+/* General Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+    color: #61dafb;
+  }
+  
+  /* Controls Section */
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #61dafb;
+    color: #1e1e1e;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #21a1f1;
+    transform: scale(1.05);
+  }
+  
+  button:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+  }
+  
+  /* Slider Styles */
+  .slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .slider-container label {
+    font-size: 16px;
+  }
+  
+  #speedRange, #sizeRange {
+    width: 150px;
+  }
+  
+  #speedValue, #sizeValue {
+    min-width: 60px;
+    text-align: left;
+  }
+  
+  /* Tooltip Styles */
+  .tooltip {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    max-width: 80%;
+    text-align: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Bars Container */
+  .container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 90%;
+    max-width: 1000px;
+    height: 400px;
+    border: 1px solid #555;
+    background-color: #2e2e2e;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .bar {
+    margin: 0 1px;
+    background-color: #61dafb;
+    width: 100%;
+    transition: height 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .bar.active {
+    background-color: #ff4136;
+  }
+  
+  .bar.sorted {
+    background-color: #2ecc40;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      height: 300px;
+    }
+  
+    button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  
+    .slider-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+  
+    #speedRange, #sizeRange {
+      width: 100%;
+    }
+  }
+  
